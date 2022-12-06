@@ -52,4 +52,53 @@ router.get('/', auth, async (req, res) => {
   }
 });
 
+// @route   Get api/posts/:id
+// @desc    Get Posts by ID
+// @access  Private
+
+router.get('/:id', auth, async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+    if (!post) {
+      return res.status(404).json({ msg: 'Post Not Found' });
+    }
+    res.json(post);
+  } catch (err) {
+    console.error(err.message);
+    if (err.kind === 'ObjectId') {
+      return res.status(404).json({ msg: 'Post Not Found' });
+    }
+    res.status(500).send('Server Error');
+  }
+});
+
+// @route   DELETE api/posts/:id
+// @desc    Delete a post
+// @access  Private
+
+router.delete('/:id', auth, async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+
+    if (!post) {
+      return res.status(404).json({ msg: 'Post Not Found' });
+    }
+
+    //Check User
+    if (post.user.toString() !== req.user.id) {
+      return res.status(401).json({ msg: 'user not authorized' });
+    }
+
+    await post.remove();
+
+    res.json({ msg: 'Post removed' });
+  } catch (err) {
+    console.error(err.message);
+    if (err.kind === 'ObjectId') {
+      return res.status(404).json({ msg: 'Post Not Found' });
+    }
+    res.status(500).send('Server Error');
+  }
+});
+
 module.exports = router;
