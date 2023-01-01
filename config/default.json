@@ -1,7 +1,15 @@
 {
+<<<<<<< HEAD
   "mongoURI": "xxxxxxxxxxxx",
   "jwtSecret": "xxxxxxxxxxxxxx",
   "githubClientId": "xxxxxxxxxxxxxxxxxxx",
   "githubSecret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   "githubSecret23": "cae3cxxxxxxxxxxx180fc0xxxxxxx8eac9172c"
+=======
+  "mongoURI": "mongodb+srv://Suyash:Suyash@devconnected.cbccscn.mongodb.net/?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "cae3c180fc08eac9172c",
+  "githubSecret": "a55d6378057839bdd50ff8ee7495e844be25853b",
+  "githubSecret23": "cae3c180fc08eac9172c"
+>>>>>>> 093c5f204520e2f4e97e5cc812c97ad7e651ad0d
 }
