@@ -1,3 +1,7 @@
 {
-  "mongoURI": "mongodb+srv://Suyash:Suyash.java7@devconnector.y4xmqge.mongodb.net/?retryWrites=true&w=majority"
+  "mongoURI": "xxxxxxxxxxxx",
+  "jwtSecret": "xxxxxxxxxxxxxx",
+  "githubClientId": "xxxxxxxxxxxxxxxxxxx",
+  "githubSecret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "githubSecret23": "cae3cxxxxxxxxxxx180fc0xxxxxxx8eac9172c"
 }
