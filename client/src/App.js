@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Landing } from './components/layout/Landing';
 import { Navbar } from './components/layout/Navbar';
 import { Register } from './components/auth/Register';
+import { Login } from './components/auth/Login';
 
 const App = () => (
   <Router>
@@ -13,6 +14,7 @@ const App = () => (
       <section className='container'>
         <Switch>
           <Route path='/register' component={Register} />
+          <Route path='/login' component={Login} />
         </Switch>
       </section>
     </Fragment>
